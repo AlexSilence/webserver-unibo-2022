@@ -1,0 +1,112 @@
+h1,h2,h3,h4,h5 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.paragraph {
+    font-size: 19px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.paragraph_height {
+    height: 100%;
+    position: relative;
+}
+.btn {
+    text-transform: unset !important;
+}
+.btn-primary {
+    background-color: #04B7E5 !important;
+    transition: transform 0.2s ease !important;
+}
+
+.btn-primary:hover {
+    box-shadow: 4px 10px 10px #777 !important;
+    transform: scale(1.03);
+}
+
+.arrow {
+    border: solid gray;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 13px;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.qty .count {
+    color: #000;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0 2px;
+    min-width: 35px;
+    text-align: center;
+}
+
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+
+div {
+    text-align: center;
+}
+
+.minus:hover {
+    background-color: #04B7E5 !important;
+}
+
+.plus:hover {
+    background-color: #04B7E5 !important;
+}
+/*Prevent text selection*/
+span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input {
+    border: 0;
+    width: 2%;
+}
+
+    nput::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input:disabled {
+        background-color: white;
+    }
+         

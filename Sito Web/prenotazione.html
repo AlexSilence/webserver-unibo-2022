@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <link rel="icon" href="secure_air_logo_transparent_favicon.png">
+    <link rel="stylesheet" href="main_css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secure Air</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+    <link rel="stylesheet" id="roboto-subset.css-css" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5" type="text/css" media="all">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script language=javascript>
+        function plusMinus(v, target) {
+            var value = parseInt(document.getElementById(target).value);
+            value += v;
+            document.getElementById(target).value = value;
+            if (document.getElementById(target).value == -1) {
+                document.getElementById(target).value = 0;
+            } else if (document.getElementById(target).value == 1000) {
+                document.getElementById(target).value = 999;
+            }
+        }
+    </script>
+    <script>
+        document.getElementById("DateId").onchange = function () {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var yyyy = today.getFullYear();
+
+            today = mm + '/' + dd + '/' + yyyy;
+            input.setAttribute("min", today);
+        }
+    </script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <div>
+        <header class="align-items-center justify-content-center justify-content-md-between py-3 ms-2 me-2  ">
+            <div class="nav col-12 col-md-auto mb-2 justify-content mb-md-0">
+                <div class="col-md-3">
+                    <a href="/" class="d-flex mb-2 mb-md-0 text-dark text-decoration-none">
+                        <img src="header_logo.png" class="img-fluid" alt="LOGO">
+                    </a>
+                </div>
+                <div class="col-1"></div>
+                <ul class="nav col-8 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link px-2 link-dark"><h5>Home</h5></a></li>
+                    <li><a href="chi_siamo.html" class="nav-link px-2 link-dark"><h5>Chi Siamo</h5></a></li>
+                    <li><a href="prezzi_bagagli.pdf" download class="nav-link px-2 link-dark"><h5>Prezzi Bagagli</h5></a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div class="container col-12 justify">
+        <div class="row">
+            <div class="col-md-12 shadow rounded p-5 my-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="col-md-12">
+                            <h3 class="p-2 my-3" style="float: left;">Partenza</h3>
+                            <input class="form-control" type="text" placeholder="Paese di partenza">
+                        </div>
+                        <div class="col-md-12">
+                            <h3 class="p-2 my-3" style="float: left;">Arrivo</h3>
+                            <input class="form-control" type="text" placeholder="Paese di arrivo">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h4 class="p-2 my-3">Adulti (14+)</h4>
+                                </div>
+                                <div class="col-5 qty mt-4">
+                                    <input class="minus bg-dark" type=button value='-' onclick='javascript:plusMinus(-1, "v")'>
+                                    <input style="width: 30px;" type=test size=10 id='v' name='v' value='0' disabled>
+                                    <input class="plus bg-dark" type=button value='+' onclick='javascript:plusMinus(1, "v")'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h4 class="p-2 my-3">Bambini (2-14)</h4>
+                                </div>
+                                <div class="col-5 qty mt-4">
+                                    <input class="minus bg-dark" type=button value='-' onclick='javascript:plusMinus(-1, "v2")'>
+                                    <input style="width: 30px;" type=test size=10 id='v2' name='v' value='0' disabled>
+                                    <input class="plus bg-dark" type=button value='+' onclick='javascript:plusMinus(1, "v2")'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h4 class="p-2 my-3">Neonati (0-2)</h4>
+                                </div>
+                                <div class="col-5 qty mt-4">
+                                    <input class="minus bg-dark" type=button value='-' onclick='javascript:plusMinus(-1, "v3")'>
+                                    <input style="width: 30px;" type=test size=10 id='v3' name='v' value='0' disabled>
+                                    <input class="plus bg-dark" type=button value='+' onclick='javascript:plusMinus(1, "v3")'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-12">
+                            <h2 class="p-2 my-3">Data Partenza</h2>
+                            <input type="date" placeholder="dd-mm-yyyy" style="width: 150px;" id="DateId" class="datapicker">
+                            <h2 class="p-2 my-3">Data Ritorno</h2>
+                            <input type="date" placeholder="dd-mm-yyyy" style="width: 150px;" id="DateId" class="datapicker">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container col-12 justify">
+        <div class="row">
+            <a href="loading.html">
+                <div class="center btn btn-primary" style="width: 100%;">
+                    <h1>Cerca</h1>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
